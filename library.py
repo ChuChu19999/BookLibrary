@@ -12,7 +12,7 @@ from database import LibraryDatabase
 
 class LibraryCatalog:
     """
-    Главный «пульт» библиотеки для окна программы.
+    Главный «пульт» библиотеки для консольной программы.
 
     Сюда приходят команды: добавить, удалить, показать список.
     """
@@ -61,7 +61,7 @@ class LibraryCatalog:
         return True
 
     def books_sorted_by_year(self) -> list[Book]:
-        """Список всех книг для таблицы на экране — от старого года к новому."""
+        """Список всех книг для вывода в консоль — от старого года к новому."""
         return self.database.get_books_sorted_by_year()
 
     def reset_to_initial_data(self) -> None:
@@ -76,7 +76,7 @@ class LibraryCatalog:
 
 def create_catalog() -> LibraryCatalog:
     """
-    Запускается при открытии программы.
+    Запускается при старте программы.
 
     Создаёт файл library.db, если его ещё нет, и готовит каталог.
     """

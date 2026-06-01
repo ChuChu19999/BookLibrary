@@ -1,12 +1,11 @@
 """
 Старт программы «Библиотека книг».
 
-Запускают так: python main.py
-Откроется окно; книги лежат в файле library.db на диске.
+Запуск: python main.py
+Работа в консоли; книги лежат в файле library.db на диске.
 """
 
-from gui import run_app
+from cli import run_app
 
 if __name__ == "__main__":
-    # Эта строка выполняется только когда запускают именно main.py
     run_app()
